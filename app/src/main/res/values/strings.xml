@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">WhatsApp</string>
+    <string name="new_group">New group</string>
+    <string name="new_broadcast">New broadcast</string>
+    <string name="whatsapp_web">WhatsApp Web</string>
+    <string name="starred_message">Starred Message</string>
+    <string name="settings">Settings</string>
+</resources>
