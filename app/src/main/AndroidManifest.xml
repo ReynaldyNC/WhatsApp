@@ -9,8 +9,10 @@
         android:roundIcon="@drawable/ico_whatsapp"
         android:supportsRtl="true"
         android:theme="@style/Theme.WhatsApp">
-        <activity android:name=".HomeActivity"></activity>
-        <activity android:name=".MainActivity" android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

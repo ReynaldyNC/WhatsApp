@@ -1,36 +1,42 @@
 package com.reynaldynurcahyo.whatsapp;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import java.util.ArrayList;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+
+import com.google.android.material.tabs.TabLayoutMediator;
+import com.reynaldynurcahyo.whatsapp.databinding.ActivityHomeBinding;
 
 public class HomeActivity extends AppCompatActivity {
-    private RecyclerView rvwa;
-    private ArrayList<User> list = new ArrayList<>();
+    ActivityHomeBinding binding;
+
+    private String[] titles = {
+            "CHATS",
+            "STATUS",
+            "CALLS"
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
-        rvwa = findViewById(R.id.recview);
-        rvwa.setHasFixedSize(true);
-
-        list.addAll(UserData.getListData());
-        showRecyclerList();
+        binding = ActivityHomeBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        init();
     }
 
-    private void showRecyclerList() {
-        rvwa.setLayoutManager(new LinearLayoutManager(this));
-        UserAdapter userAdapter = new UserAdapter(list);
-        rvwa.setAdapter(userAdapter);
+    private void init() {
+        getSupportActionBar().setElevation(0);
+        binding.viewPager.setAdapter(new ViewPagerFragmentAdapter(this));
+
+        new TabLayoutMediator(binding.tabLayout, binding.viewPager,
+                (tab, position) -> tab.setText(titles[position])).attach();
     }
 
     @Override
@@ -57,6 +63,30 @@ public class HomeActivity extends AppCompatActivity {
                 break;
             case R.id.menu_pref:
                 break;
+        }
+    }
+
+    private class ViewPagerFragmentAdapter extends FragmentStateAdapter {
+        public ViewPagerFragmentAdapter(@NonNull FragmentActivity fragmentActivity) {
+            super(fragmentActivity);
+        }
+        @NonNull
+        @Override
+        public Fragment createFragment(int position) {
+            switch (position) {
+                case 0:
+                    return new ChatFragment();
+                case 1:
+                    return new StatusFragment();
+                case 2:
+                    return new CallFragment();
+            }
+            return new ChatFragment();
+        }
+
+        @Override
+        public int getItemCount() {
+            return titles.length;
         }
     }
 }

@@ -1,44 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="horizontal"
+    android:id="@+id/chat_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    android:paddingTop="8dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/item_photo"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@color/white"
         android:src="@android:color/darker_gray" />
-    
-    <LinearLayout
+
+    <TextView
+        style="@style/FontA.Bold"
+        android:id="@+id/item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/item_photo"
+        android:maxLines="1"
+        tools:text="Username"/>
 
-        <TextView
-            style="@style/FontA.Bold"
-            android:id="@+id/item_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:maxLines="1"
-            tools:text="Username"/>
+    <TextView
+        style="@style/FontB"
+        android:id="@+id/item_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_toRightOf="@id/item_photo"
+        android:layout_below="@id/item_name"
+        android:maxLines="1"
+        tools:text="Chat" />
 
-        <TextView
-            style="@style/FontB"
-            android:id="@+id/item_chat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
-            android:maxLines="1"
-            tools:text="Chat" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/item_chat"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="75dp"
+        android:layout_alignEnd="@id/item_chat"
+        android:background="#f2f2f2" />
 
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

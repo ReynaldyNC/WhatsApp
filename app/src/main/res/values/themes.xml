@@ -2,17 +2,14 @@
     <!-- Base application theme. -->
     <style name="Theme.WhatsApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">#128C7E</item>
-        <item name="colorPrimaryVariant">#075E54</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-    </style>
-    <style name="Theme.AppCompat.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="backgroundColor">@color/white</item>
+        <item name="elevation">0dp</item>
+        <item name="android:elevation">0dp</item>
     </style>
     <style name="FontA">
         <item name="android:textSize">16sp</item>
@@ -29,6 +26,9 @@
     </style>
     <style name="FontB">
         <item name="android:textSize">14sp</item>
-        <item name="android:textColor">#b3b3b3</item>
+        <item name="android:textColor">#8c8c8c</item>
+    </style>
+    <style name="FontB.Bold">
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>
