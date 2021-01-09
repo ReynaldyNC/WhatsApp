@@ -1,7 +1,7 @@
 # WhatsApp
 WhatsApp app build by myself
 
-Minimum: Android 5.0 (Lolipop)
+Minimum SDK: Android 5.0 (Lollipop)
 
 Images i use:
 https://www.flaticon.com/
