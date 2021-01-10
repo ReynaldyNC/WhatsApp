@@ -3,10 +3,12 @@ WhatsApp app build by myself
 
 Minimum SDK: Android 5.0 (Lollipop)
 
-Images i use:
+Images i used:
 https://www.flaticon.com/
 
+Icons i used:
+https://material.io/resources/icons/?style=baseline
+
 # Updates
-Updates v1.2.0:
-- New icon template
-- Added settings activity
+Updates v1.2.1:
+- Minor fixes
