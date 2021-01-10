@@ -7,6 +7,7 @@
 
     <ImageView
         android:id="@+id/app_icon"
+        android:src="@drawable/ico_whatsapp"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerVertical="true"

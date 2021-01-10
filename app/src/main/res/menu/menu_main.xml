@@ -19,11 +19,11 @@
 
     <item
         android:id="@+id/menu_starred"
-        android:title="@string/starred_message"
+        android:title="@string/starred_messages"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/menu_pref"
+        android:id="@+id/menu_settings"
         android:title="@string/settings"
         app:showAsAction="never" />
 

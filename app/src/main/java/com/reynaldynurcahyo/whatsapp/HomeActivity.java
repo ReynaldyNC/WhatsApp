@@ -1,5 +1,6 @@
 package com.reynaldynurcahyo.whatsapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -37,33 +38,6 @@ public class HomeActivity extends AppCompatActivity {
 
         new TabLayoutMediator(binding.tabLayout, binding.viewPager,
                 (tab, position) -> tab.setText(titles[position])).attach();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        setMenu(item.getItemId());
-        return super.onOptionsItemSelected(item);
-    }
-
-    private void setMenu(int itemId) {
-        switch (itemId) {
-            case R.id.menu_new_group:
-                break;
-            case R.id.menu_broadcast:
-                break;
-            case R.id.menu_web:
-                break;
-            case R.id.menu_starred:
-                break;
-            case R.id.menu_pref:
-                break;
-        }
     }
 
     private class ViewPagerFragmentAdapter extends FragmentStateAdapter {

@@ -18,13 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView imageView = (ImageView) findViewById(R.id.app_icon);
-
-        Glide.with(this)
-                .asBitmap()
-                .load(R.drawable.ico_whatsapp)
-                .into(imageView);
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
