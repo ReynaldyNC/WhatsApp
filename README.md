@@ -10,5 +10,5 @@ Icons i used:
 https://material.io/resources/icons/?style=baseline
 
 # Updates
-Updates v1.2.1:
-- Minor fixes
+Updates v1.2.2:
+- Minor changes
