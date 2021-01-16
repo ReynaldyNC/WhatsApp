@@ -1,5 +1,5 @@
 # Details
-WhatsApp app build by myself
+WhatsApp app made by myself
 
 Minimum SDK: Android 5.0 (Lollipop)
 
